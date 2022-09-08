@@ -34,3 +34,9 @@ public class BubbleSort {
         }
     }
 }
+/*
+Time complexity:
+Worst case  : O(N^2)
+Best case   : O(N) Array already sorted
+Average case: O(N) Array element in random order
+ */
