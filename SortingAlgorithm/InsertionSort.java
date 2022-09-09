@@ -12,7 +12,7 @@ public class InsertionSort {
         for(int i=0;i<n;i++){
             output.add(arr[i]);
             for(int j=output.size()-1;j>0;j--){
-                if(arr[j]>arr[j-1])
+                if(output.get(j)>=output.get(j-1))
                 break;
                 Collections.swap(output,j-1,j);
             }
