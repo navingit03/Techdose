@@ -2,7 +2,7 @@ package Day4NumberTheory;
 
 import java.util.Scanner;
 
-public class GcdOfTwoNumbers {
+public class GcdLcmOfTwoNumbers {
     static int GCD(int a,int b){
         if(a==0){
             return b;
