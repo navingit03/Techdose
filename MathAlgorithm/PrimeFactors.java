@@ -1,4 +1,4 @@
-package Day4NumberTheory;
+package MathAlgorithm;
 import java.util.*;
 public class PrimeFactors {
     public static void main(String[] args) {

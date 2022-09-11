@@ -1,3 +1,4 @@
+package BitManipulation;
 import java.util.Scanner;
 public class RightMost1 {
     public static void main(String[] args) {

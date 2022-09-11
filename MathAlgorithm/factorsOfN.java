@@ -1,4 +1,4 @@
-package Day4NumberTheory;
+package MathAlgorithm;
 
 import java.util.*;
 

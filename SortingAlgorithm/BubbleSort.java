@@ -1,5 +1,4 @@
 package SortingAlgorithm;
-
 import java.util.Scanner;
 public class BubbleSort {
     public int[] BubbleSortAlgo(int arr[],int size){

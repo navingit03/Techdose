@@ -1,5 +1,5 @@
+package BitManipulation;
 import java.util.Scanner;
-
 public class changeCases {
     static char tolower(char ch){
         return (char) (ch|(char)(1<<5));

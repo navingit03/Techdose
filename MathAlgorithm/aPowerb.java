@@ -1,7 +1,5 @@
-package Day4NumberTheory;
-
+package MathAlgorithm;
 import java.util.Scanner;
-
 public class aPowerb {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);

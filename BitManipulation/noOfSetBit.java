@@ -1,13 +1,16 @@
+package BitManipulation;
 import java.util.Scanner;
 
-public class largestPossiblePowerOf2 {
+public class noOfSetBit {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
-        int k=0;
+        int count=0;
         for(int i=1;i<=n;i<<=1){
-            k=i;
+            if((n&i)!=0){
+                count++;
+            }
         }
-        System.out.println(k);
+        System.out.print(count);
     }
 }

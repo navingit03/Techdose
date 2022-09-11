@@ -1,3 +1,4 @@
+package BitManipulation;
 import java.util.Scanner;
 
 public class setithBit {

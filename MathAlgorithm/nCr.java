@@ -1,4 +1,4 @@
-package Day4NumberTheory;
+package MathAlgorithm;
 import java.util.Scanner;
 public class nCr {
     public static void main(String[] args) {
