@@ -1,5 +1,6 @@
 //Leetcode 668. Kth Smallest Number in Multiplication Table
 //Binary Search
+//Element at matrix[i][j]=i*j;
 class Solution {
     public int lessthanK(int mid,int m,int n) //function used to find number of elements which is <= mid between low and high
     {
