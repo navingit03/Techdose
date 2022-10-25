@@ -9,7 +9,7 @@ public class nextGreaterElement {
         for(int i=arr.length-1;i>=0;i--){
             while(!stack.isEmpty()&&(arr[stack.peek()]<=arr[i])) //finding next small element from last
             {
-                stack.pop();
+                stack.pop(); //poping small elements in stack
             }
             res[i]=stack.isEmpty()?-1:arr[stack.peek()]; //if not empty then top is NGE
             stack.push(i);
