@@ -1,3 +1,5 @@
+//we need to find next greater element of curr arr[i]
+//ex : arr[] = [ 4 , 5 , 2 , 25 ] res[] = arr[] = [ 5 , 25 , 25 , -1 ]
 package StackQueue;
 import java.util.*;
 public class nextGreaterElement {
