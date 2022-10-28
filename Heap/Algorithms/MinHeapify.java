@@ -11,11 +11,11 @@ public class MinHeapify {
         if(left>=n||right>=n){
             return arr;  //if left or right is outOfBound then return arr
         }
-        if(left<n && arr[left]<arr[small]) //if left child is smaller than parent then make large=left and swap
+        if(left<n && arr[left]<arr[small]) //if left child is smaller than parent then make small=left and swap
         {
             small=left;
         }
-        if(right<n && arr[right]<arr[small]) //if right child is smaller than parent then make right=left and swap
+        if(right<n && arr[right]<arr[small]) //if right child is smaller than parent then make small=right and swap
         {
             small=right;
         }
