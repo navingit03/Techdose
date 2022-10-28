@@ -29,7 +29,7 @@ public class Maxheapify {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt(); //number of nodes
-        int[] arr=new int[n+1]; //for non heap array input
+        int[] arr=new int[n+1]; //for non heap array input but left and right tree of index 1 is maxheap
         for(int i=1;i<=n;i++)
         {
             arr[i]=sc.nextInt(); //scanning the element from 1 as heap is array 1 indexed
