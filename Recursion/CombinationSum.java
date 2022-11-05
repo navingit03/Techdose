@@ -1,7 +1,7 @@
 //Leetcode 39. Combination Sum
 class Solution {
     List<List<Integer>> result;
-    public void dfs(int []arr,int target,int index,int sum,List<Integer> temp){
+    public void backtrack(int []arr,int target,int index,int sum,List<Integer> temp){
         if(target==sum) //if sum==target
         {
             result.add(new ArrayList<>(temp));
@@ -23,7 +23,7 @@ class Solution {
     }
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         result=new ArrayList<>();
-        dfs(candidates,target,0,0,new ArrayList<>()); //dfs method call
+        backtrack(candidates,target,0,0,new ArrayList<>()); //dfs method call
         return result;
     }
 }
