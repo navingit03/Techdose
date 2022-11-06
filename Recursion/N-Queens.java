@@ -1,4 +1,5 @@
 //Leetcode 51. N-Queens
+//Youtube-takeUforward
 class Solution {
     List<List<String>> list=new ArrayList<>();
     public void solve(int col,char[][] mat,int n,int[] leftrow,int []upperDiagonal,int []lowerDiagonal){
@@ -41,6 +42,7 @@ class Solution {
         int leftrow[]=new int[n]; //row frequency to check if already 'Q' is present in same row on left side
         int upperDiagonal[]=new int[2*n-1]; //upperDiagonal frequency to check if already 'Q' is present in same upperDiagonal on left side
         int lowerDiagonal[]=new int[2*n-1]; //lowerDiagonal frequency to check if already 'Q' is present in same lowerDiagonal on left side
+        //size =2*n-1 because col+row will max when n-1+n-1=2*n-1
         
         solve(0,mat,n,leftrow,upperDiagonal,lowerDiagonal); //method call
         return list;
