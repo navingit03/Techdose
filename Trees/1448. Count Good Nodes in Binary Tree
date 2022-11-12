@@ -1,0 +1,19 @@
+//Leetcode 1448. Count Good Nodes in Binary Tree
+
+class Solution {
+    int count=0;
+    public void countgoodNodes(TreeNode root,int max){
+        if(root==null) return;
+        if(root.val>=max) //if curr max<=root.val count++
+        {
+            count++;
+        }
+        max=Math.max(max,root.val); //updating max
+        countgoodNodes(root.left,max); //sending left and updated max
+        countgoodNodes(root.right,max); //sending right and max that we sent to left
+    }
+    public int goodNodes(TreeNode root) {
+        countgoodNodes(root,Integer.MIN_VALUE); //min value because to count root node
+        return count;
+    }
+}
