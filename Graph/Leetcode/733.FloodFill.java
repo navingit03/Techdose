@@ -1,4 +1,5 @@
 //TC: O(n*m)
+//SC: O(n*m) -> stack call
 class Solution {
     public void dfs(int[][] image, int i, int j,int prev,int color){
         if(i<0||j<0||j>=image[0].length||i>=image.length) return; //invalid index
