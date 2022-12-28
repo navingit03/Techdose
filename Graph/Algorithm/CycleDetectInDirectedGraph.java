@@ -1,4 +1,4 @@
-//visited true/false method
+//visited true/false method by dfs
 package GraphAlgo;
 import java.util.*;
 public class CycleDetectInDirectedGraph {
