@@ -1,9 +1,9 @@
 package GraphAlgo;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class CycleDetectionUsingKahnsAlgorithmBFS {
-    public static boolean kahnsalgo(List<List<Integer>> adjList,int []indegree,int []ans){
+    public static void kahnsalgo(List<List<Integer>> adjList,int []indegree,int []ans){
         Queue<Integer> q=new LinkedList<>(); //queue
         for(int i=0;i<indegree.length;i++)
         {
@@ -32,7 +32,6 @@ public class CycleDetectionUsingKahnsAlgorithmBFS {
         }else{
             System.out.println("Cycle not found");
         }
-        return true; //return true
     }
     public static void main(String[] args) {
         int n=5;
