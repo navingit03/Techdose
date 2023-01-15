@@ -1,3 +1,4 @@
+//find longest repeating subsequence in which characters of two subsequences are same but not same index of s character
 public class LongestRepeatingSubsequence {
     public static void main(String[] args) {
         String s="AABB";
