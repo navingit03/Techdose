@@ -1,18 +1,10 @@
 //leetcode 53. Maximum Subarray - Longest sum contiguous subarray
 class Solution {
     public int maxSubArray(int[] nums) {
-        int max=Integer.MIN_VALUE;
-        int sum=0;
-        for(int i=0;i<nums.length;i++){
-            sum+=nums[i];
-            if(sum<nums[i]) //if curr sum is < nums[i]
-            {
-                sum=nums[i]; //update
-            }
-            if(sum>max) //new max found
-            {
-                max=sum;
-            }
+        int max=nums[0],currmax=nums[0];
+        for(int i=1;i<nums.length;i++){
+            currmax=Math.max(nums[i],currmax+nums[i]);
+            max=Math.max(max,currmax);
         }
         return max;
     }
