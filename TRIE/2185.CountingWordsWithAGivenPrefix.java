@@ -5,7 +5,7 @@ class Solution {
         TrieNode next[]=new TrieNode[26];
         int prefixctr;
     }
-    public void insert(String s)
+    public void insert(String s) //insert string in trie
     {
         TrieNode temp=root;
         for(int i=0;i<s.length();i++)
@@ -16,7 +16,7 @@ class Solution {
                 temp.next[index]=new TrieNode();
             }
             temp=temp.next[index];
-            temp.prefixctr++;
+            temp.prefixctr++; //for every char increase prefixctr++
         }
     }
     public int prefixcount(String pre)
@@ -28,7 +28,7 @@ class Solution {
             if(temp.next[index]==null) return 0;
             temp=temp.next[index];
         }
-        return temp.prefixctr;
+        return temp.prefixctr; //return prefixctr value
     }
 
     public int prefixCount(String[] words, String pref) {
@@ -37,6 +37,6 @@ class Solution {
         {
             insert(words[i]);
         }
-        return prefixcount(pref);
+        return prefixcount(pref); //finding words with pref
     }
 }
