@@ -31,6 +31,6 @@ class countdistinctsubstring
         {
             insert(s.substring(i));
         }
-        System.out.println("total distinct substring of s is "+result+1); //plus one for empty substring
+        System.out.println("total distinct substring of s is "+(result+1)); //plus one for empty substring
     }
 }
