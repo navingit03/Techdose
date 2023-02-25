@@ -32,6 +32,14 @@ public class StackUsingArray {
         }
         return s[topOfStack];
     }
+    public static boolean isEmpty()
+    {
+        if(topOfStack<0)
+        {
+            return true;
+        }
+        return false;
+    }
     public static void main(String[] args) {
         push(5);
         push(7);
@@ -39,5 +47,8 @@ public class StackUsingArray {
         System.out.println( pop() );
         System.out.println( peek() );
         System.out.println( pop() );
+        System.out.println(isEmpty());
+        System.out.println( pop() );
+        System.out.println(isEmpty());
     }
 }
