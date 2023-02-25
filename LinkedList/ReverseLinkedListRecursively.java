@@ -1,6 +1,3 @@
-//Leetcode 206. Reverse Linked List
-//Reverse of a linked list recursively
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -12,13 +9,15 @@
  * }
  */
 class Solution {
-    public ListNode reverseList(ListNode head) 
-    {
-        ListNode curr=head;
-        if(curr==null||curr.next==null) return curr; //finding the last node of the given linkedlist during recursive call and returning last node to the curr
-        ListNode ptr=reverseList(curr.next); //sending the curr.next as a recursive call
-        curr.next.next=curr; //curr node next node points to the curr node (ex: let curr=(last-1) node ,curr.next.next(last node) points to the curr node(last-1 node))
-        curr.next=null; //curr node next = null breaking the link
-        return ptr; //return ptr
+    public ListNode reverseList(ListNode head) {
+        if(head==null) return null; //base condition
+        ListNode newHead=head; //creating newHead to store last node of given LL
+        if(head.next!=null) //if next is not null recursion call
+        {
+            newHead=reverseList(head.next); //newHead store the node of last recursion call
+            head.next.next=head; //making head.next node's next to point to head
+        }
+        head.next=null; //at last make head.next=null
+        return newHead; //return newHead
     }
 }
