@@ -11,6 +11,7 @@ class Solution {
                 return false;
             }
             if(board[3*(row/3)+i/3][3*(col/3)+i%3]==ch) //checking if that 3*3 box already has ch 
+                // check below to see how it works
             {
                 return false;
             }
@@ -50,3 +51,60 @@ class Solution {
         solve(board); //method call
     }
 }
+/*
+Those who can't understand the logic for subgrid part of sudoku can think of like -
+There are 3 sized rows and columns so we have to do row/3 and column/3 to get what specific subgrid we are in !!! But this will not be enough as we have to traverse whole subgrid also, so we have to add various coordinates like - 
+
+offset is nothing but first element of subgrid 
+
+offset(which we can get by row//3 and col//3)  
++ for each of given below 
+
+(0,0) (0,1),(0,2),
+(1,0) (1,1),(1,2),
+(2,0) (2,1),(2,2)
+
+offset + (0,0)
+offset + (0,1)
+offset + (0,2)
+
+offset + (1,0)
+offset + (1,1)
+offset + (1,2)
+
+offset + (2,0)
+offset + (2,1)
+offset + (2,2)
+
+For example if we talk about what striver talks about at  19:24 (5,7) position
+we can get subgrid offset by 
+row offset = 5//3 ==>1
+col offset = 7//3 ==> 2
+
+ which is second rowth and third column subgrid -
+
+|    0,0   |  0,1   |  0,2    |
+|    1,0   |   1,1  |   1,2   |
+|    2,0   |   2,1  |   2,2   |
+
+The above is all 9 subgrid of sudoku
+
+Again back with example we get 1,2 grid and now we have to add all coordinates to traverse that block
+like 
+
+(0,0) (0,1),(0,2),
+(1,0) (1,1),(1,2),
+(2,0) (2,1),(2,2)
+
+for x= 0,0,0,1,1,1,2,2,2 ( extracting all x of above )
+for y = 0,1,2,0,1,2,0,1,2 (extracting all y of above )
+
+so basically x = i//3 
+and y = i%3  for i ranging from 0 to 9
+
+so finally formula is
+
+for i=0 to 9-
+row = 3 * (x//3) + i//3  ==>  (offset + 0,0,0,1,1,1,2,2,2 )
+col = 3*(y//3) + i % 3 ==> (offset + 0,1,2,0,1,2,0,1,2 )
+*/
