@@ -104,7 +104,7 @@ and y = i%3  for i ranging from 0 to 9
 
 so finally formula is
 
-for i=0 to 9-
+for i=0 to 9
 row = 3 * (x//3) + i//3  ==>  (offset + 0,0,0,1,1,1,2,2,2 )
 col = 3*(y//3) + i % 3 ==> (offset + 0,1,2,0,1,2,0,1,2 )
 */
