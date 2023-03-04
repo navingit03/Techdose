@@ -1,5 +1,5 @@
 //Leetcode - 88. Merge Sorted Array
-//Merge two sorted array without extra space - pointer approach
+//Merge two sorted array without extra space(using only nums1 length) - pointer approach
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i=m-1,j=n-1,index=nums1.length-1;
