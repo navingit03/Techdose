@@ -19,7 +19,7 @@ class Solution {
         int min=0,qsize=0;
         while(!q.isEmpty()) //if queue is not empty
         {
-            qsize=q.size(); //finding current queue size
+            qsize=q.size(); //finding current queue size so that newly added will not be removed at curr min
             for(int i=0;i<qsize;i++)
             {
                 int pos[]=q.poll(); //finding pos of rotten orange at queue's front
